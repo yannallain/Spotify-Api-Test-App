@@ -35,7 +35,7 @@ fun <T> Activity.guardValidSpotifyApi(
             block(api)
         } catch (e: SpotifyException) {
             e.printStackTrace()
-            val usesPkceAuth = Model.credentialStore.spotifyToken?.refreshToken != null
+            val usesPkceAuth = Model.credentialStore.spotifyRefreshToken != null
             if (usesPkceAuth) {
                 Log.d("XXX", "Guard(4)")
                 val api = Model.credentialStore.getSpotifyClientPkceApi()!!

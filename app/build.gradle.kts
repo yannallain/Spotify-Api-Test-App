@@ -25,7 +25,7 @@ android {
     buildTypes {
         debug {
             isDebuggable = true
-            buildConfigField("String", "SPOTIFY_CLIENT_ID", "\"0d7afea9e025418892dd31674b6170ee\"")
+            buildConfigField("String", "SPOTIFY_CLIENT_ID", "\"7424772b26c34fbda3a22487c1f9f240\"")
             buildConfigField(
                 "String",
                 "SPOTIFY_REDIRECT_URI_AUTH",
@@ -65,7 +65,7 @@ dependencies {
     implementation("com.github.skydoves:landscapist-glide:1.5.0" )
 
     // Spotify
-    implementation("com.adamratzman:spotify-api-kotlin-android:3.8.6")
+    implementation("com.adamratzman:spotify-api-kotlin-android:99.0.0")
 
     implementation("androidx.compose.runtime:runtime:1.1.1")
     implementation("androidx.compose.ui:ui:1.1.1")

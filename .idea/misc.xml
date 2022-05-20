@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../../../.gradle/caches/transforms-3/3407736b221601b484c0457a14cc41cf/transformed/jetified-spotify-web-api-kotlin-debug/res/layout/spotify_pkce_auth_layout.xml" value="0.1453125" />
         <entry key="../../../../../layout/compose-model-1653000036613.xml" value="0.26851851851851855" />
         <entry key="../../../../layout/compose-model-1613747563995.xml" value="1.0" />
         <entry key="../../../../layout/compose-model-1613749204614.xml" value="0.22685185185185186" />
