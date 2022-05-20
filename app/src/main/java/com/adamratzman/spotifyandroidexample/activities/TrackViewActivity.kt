@@ -3,6 +3,7 @@ package com.adamratzman.spotifyandroidexample.activities
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -33,10 +34,13 @@ class TrackViewActivity : BaseActivity() {
 
         setContent {
             val tracks = guardValidSpotifyApi(classBackTo = ActionHomeActivity::class.java) { api ->
-                api.search.searchTrack("Avicii").items
+                Log.d("XXX", "-> ${api.token.scopes}")
+                Log.d("XXX", "${api.users.getClientProfile()}")
+                api.playlists.getPlaylistTracks("spotify:playlist:37i9dQZEVXcIf1tmw03VJu")
+                    .getAllItems().map { it?.track?.asTrack }
             }
 
-            if (tracks != null) TrackViewPage(this, tracks)
+            if (tracks != null) TrackViewPage(this, tracks as List<Track>)
         }
     }
 }
